@@ -81,13 +81,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
-  text-align: center;
 }
 
 .video-overlay-text h1 {
   font-size: 3.5rem;
   color: white;
+  text-align: center;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 2px;
@@ -111,13 +110,39 @@ body {
   }
 }
 
-.subtitle {
-  font-size: 1.1rem;
-  font-style: italic;
-  margin-top: 15px;
+/* ===== HERO TEXT SECTION ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background: #ffffff;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.85);
-  animation: fadeIn 2s ease 0.5s both;
+  color: #1a1a1a;
+}
+
+.btn {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 14px 36px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  background: #333;
 }
 
 /* ===== COLLECTION SECTION ===== */
@@ -131,18 +156,6 @@ body {
   margin-bottom: 50px;
   letter-spacing: 1px;
   color: #1a1a1a;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
-.collection h2::after {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 2px;
-  margin: 10px auto 0;
-  background: #1a1a1a;
 }
 
 .collection-grid {
@@ -168,12 +181,10 @@ body {
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0.95;
 }
 
 .pair img:hover {
-  opacity: 1;
-  transform: scale(1.03);
+  transform: scale(1.02);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -190,12 +201,10 @@ body {
 }
 
 .ig-icon {
-  width: 16px !important;
-  height: 16px !important;
-  margin-right: 6px;
+  width: 18px;
+  margin-right: 8px;
   vertical-align: middle;
-  opacity: 0.75;
-  object-fit: contain;
+  opacity: 0.7;
 }
 
 .pair.single {
@@ -208,7 +217,106 @@ body {
   display: block;
 }
 
-/* ===== BUTTONS ===== */
+/* ===== FOOTER ===== */
+footer {
+  background: #eeeeee;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* ===== Tambahan TRANSISI ELEGAN ===== */
+a, .btn, .pair img {
+  transition: all 0.4s ease;
+}
+
+/* ===== Hover Link Elegan ===== */
+.navbar nav a:hover {
+  color: #cccccc;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ===== Subtitle di Video Overlay ===== */
+.video-overlay-text .subtitle {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-top: 15px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.85);
+  animation: fadeIn 2s ease 0.5s both;
+}
+
+/* ===== Efek Gradasi pada Navbar Saat Scroll ===== */
+.navbar.scrolled {
+  background: rgba(20,20,20,0.95);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ===== Tombol Elegan ===== */
+.btn {
+  border: 1px solid #1a1a1a;
+  background: transparent;
+  color: #1a1a1a;
+}
+
+.btn:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* ===== Efek Fade untuk Gambar Produk ===== */
+.pair img {
+  opacity: 0.95;
+}
+
+.pair img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/* ===== Collection Heading Border ===== */
+.collection h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.collection h2::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  margin: 10px auto 0;
+  background: #1a1a1a;
+}
+
+/* ===== Footer Background lebih gelap ===== */
+footer {
+  background: #ddd;
+  color: #555;
+}
+
+/* ===== Responsive Font Size (opsional) ===== */
+@media (max-width: 768px) {
+  .video-overlay-text h1 {
+    font-size: 2.2rem;
+  }
+  .video-overlay-text h1 span {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  .pair {
+    grid-template-columns: 1fr;
+  }
+  .pair.single img {
+    width: 90%;
+  }
+}
+
 .shop-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -234,7 +342,31 @@ body {
   color: #fff;
 }
 
-/* ===== FOOTER ===== */
+.ig-icon {
+  width: 16px !important;
+  height: 16px !important;
+  margin-right: 6px;
+  vertical-align: middle;
+  opacity: 0.75;
+  object-fit: contain;
+}
+
+.collection-subtitle {
+  font-size: 1rem;
+  margin-bottom: 60px;
+  color: #555;
+  font-style: italic;
+  letter-spacing: 0.8px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.navbar nav a.active {
+  border-bottom: 2px solid white;
+  padding-bottom: 4px;
+}
+
 footer {
   background: #eeeeee;
   padding: 40px 60px;
@@ -282,13 +414,6 @@ footer {
   opacity: 0.8;
 }
 
-/* ===== ACTIVE LINK ===== */
-.navbar nav a.active {
-  border-bottom: 2px solid white;
-  padding-bottom: 4px;
-}
-
-/* ===== MEDIA QUERY RESPONSIVE ===== */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -323,25 +448,5 @@ footer {
   .subtitle {
     font-size: 0.95rem;
     margin-top: 10px;
-  }
-
-  .pair {
-    grid-template-columns: 1fr;
-  }
-
-  .pair.single img {
-    width: 90%;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-    align-items: center;
-  }
-
-  .footer-left,
-  .footer-right {
-    align-items: center;
   }
 }
