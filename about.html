@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Lionora The Label</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+      color: #1a1a1a;
+    }
+
+    .about-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .about-content {
+      max-width: 760px;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 50px 30px;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .about-content:hover {
+      transform: translateY(-4px);
+    }
+
+    .about-content h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: 1.2px;
+      position: relative;
+    }
+
+    .about-content h1::after {
+      content: "";
+      width: 60px;
+      height: 2px;
+      background: #1a1a1a;
+      display: block;
+      margin: 15px auto 0 auto;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      font-style: italic;
+      color: #555;
+      letter-spacing: 0.4px;
+    }
+
+    footer {
+      background: #eeeeee;
+      padding: 30px 10px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      position: sticky;
+      top: 0;
+      background: rgba(20, 20, 20, 0.9);
+      color: white;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: white;
+    }
+
+    .navbar nav ul {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+    }
+
+    .navbar nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      transition: opacity 0.3s ease;
+    }
+
+    .navbar nav a:hover {
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="logo">LIONORE THE LABEL</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section">
+    <div class="about-content">
+      <h1>About</h1>
+      <p>
+        Untuk kamu, perempuan Gen Z yang ingin tampil rapi, sopan, dan tetap stylish — Lionore The Label hadir sebagai jawaban.<br><br>
+        Kami menghadirkan fashion yang clean, effortless, dan elegan, cocok dipakai ke kampus, hangout, atau acara formal.<br><br>
+        Sopan bukan berarti kuno. Dan gaya bukan berarti terbuka. Di Lionore, kamu bisa punya keduanya.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <p class="brand-name">© 2025 Lionora The Label</p>
+      <p>📍 Malang, Indonesia</p>
+    </div>
+    <div class="footer-right">
+      <p>
+        <img src="img/iglogo.jpg" alt="Instagram" class="ig-icon-footer" />
+        <a href="https://www.instagram.com/lionorethelabel" target="_blank">@liorathe.label</a>
+      </p>
+      <p>📞 +62 812-3456-7890</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
